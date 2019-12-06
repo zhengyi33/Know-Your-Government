@@ -1,0 +1,232 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/scroll"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#000000">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".MainActivity">
+
+
+        <TextView
+            android:id="@+id/officialLocationText"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:background="@color/colorPrimaryDark"
+            android:paddingTop="8dp"
+            android:paddingBottom="8dp"
+            android:textAlignment="center"
+            android:textColor="@android:color/background_light"
+            android:textSize="14sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            tools:layout_editor_absoluteY="8dp"
+            tools:text="TextView" />
+
+        <TextView
+            android:id="@+id/officialOfficeText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:textColor="@android:color/background_light"
+            android:textSize="18sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/officialLocationText"
+            tools:text="TextView" />
+
+        <TextView
+            android:id="@+id/officialNameText"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:layout_marginTop="8dp"
+            android:textColor="@android:color/background_light"
+            android:textSize="18sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/officialOfficeText"
+            tools:text="TextView" />
+
+        <TextView
+            android:id="@+id/officialPartyText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:textColor="@android:color/background_light"
+            android:textSize="14sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/officialNameText"
+            tools:text="TextView" />
+
+        <ImageView
+            android:id="@+id/profileImage"
+            android:layout_width="403dp"
+            android:layout_height="372dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="8dp"
+            android:onClick="photoClicked"
+            android:scaleType="fitCenter"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/officialPartyText"
+            app:srcCompat="@drawable/missing"
+            tools:srcCompat="@drawable/missing" />
+
+        <TextView
+            android:id="@+id/address"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:text="Address:"
+            android:textColor="@android:color/background_light"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/profileImage" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline7"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_begin="115dp" />
+
+        <TextView
+            android:id="@+id/officialAddressText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:textColor="@android:color/background_light"
+            app:layout_constraintStart_toStartOf="@+id/guideline7"
+            app:layout_constraintTop_toBottomOf="@+id/profileImage"
+            tools:text="TextView" />
+
+        <TextView
+            android:id="@+id/phone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:text="Phone:"
+            android:textColor="@android:color/background_light"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/officialAddressText" />
+
+        <TextView
+            android:id="@+id/officialPhoneText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:textColor="@android:color/background_light"
+            app:layout_constraintStart_toStartOf="@+id/guideline7"
+            app:layout_constraintTop_toBottomOf="@+id/officialAddressText"
+            tools:text="TextView" />
+
+        <TextView
+            android:id="@+id/email"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:text="Email:"
+            android:textColor="@android:color/background_light"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/officialPhoneText" />
+
+        <TextView
+            android:id="@+id/emailText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:textColor="@android:color/background_light"
+            app:layout_constraintStart_toStartOf="@+id/officialPhoneText"
+            app:layout_constraintTop_toBottomOf="@+id/officialPhoneText"
+            tools:text="TextView" />
+
+        <TextView
+            android:id="@+id/website"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:text="Website:"
+            android:textColor="@android:color/background_light"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/emailText" />
+
+        <TextView
+            android:id="@+id/websiteText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:textColor="@android:color/background_light"
+            app:layout_constraintStart_toStartOf="@+id/guideline7"
+            app:layout_constraintTop_toBottomOf="@+id/emailText"
+            tools:text="TextView" />
+
+        <ImageView
+            android:id="@+id/logoImage"
+            android:layout_width="60dp"
+            android:layout_height="50dp"
+            android:clickable="true"
+            android:onClick="logoClicked"
+            app:layout_constraintBottom_toBottomOf="@+id/profileImage"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.501"
+            app:layout_constraintStart_toStartOf="parent"
+            tools:srcCompat="@drawable/dem_logo" />
+
+        <ImageView
+            android:id="@+id/facebookView"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginStart="64dp"
+            android:layout_marginTop="16dp"
+            android:onClick="facebookClicked"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/websiteText"
+            app:srcCompat="@drawable/facebook" />
+
+        <ImageView
+            android:id="@+id/twitterView"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginStart="32dp"
+            android:layout_marginTop="16dp"
+            android:onClick="twitterClicked"
+            app:layout_constraintStart_toEndOf="@+id/facebookView"
+            app:layout_constraintTop_toBottomOf="@+id/websiteText"
+            app:srcCompat="@drawable/twitter" />
+
+        <ImageView
+            android:id="@+id/youtubeView"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginStart="32dp"
+            android:layout_marginTop="16dp"
+            android:onClick="youtubeClicked"
+            app:layout_constraintStart_toEndOf="@+id/twitterView"
+            app:layout_constraintTop_toBottomOf="@+id/websiteText"
+            app:srcCompat="@drawable/youtube" />
+
+        <ImageView
+            android:id="@+id/plusView"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginStart="32dp"
+            android:layout_marginTop="16dp"
+            android:onClick="plusClicked"
+            app:layout_constraintStart_toEndOf="@+id/youtubeView"
+            app:layout_constraintTop_toBottomOf="@+id/websiteText"
+            app:srcCompat="@drawable/googleplus" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>
